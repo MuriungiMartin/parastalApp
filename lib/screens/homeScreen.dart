@@ -1,6 +1,8 @@
 // ignore_for_file: file_names, must_be_immutable, use_key_in_widget_constructors, prefer_const_declarations
 
 import 'package:flutter/material.dart';
+import 'package:lbdaap/base/export_all.dart';
+import 'package:lbdaap/screens/loginscreen.dart';
 
 class HomePage extends StatelessWidget {
   static String tag = 'home-page';
@@ -15,7 +17,7 @@ class HomePage extends StatelessWidget {
         child: CircleAvatar(
           radius: 72.0,
           backgroundColor: Colors.transparent,
-          backgroundImage: AssetImage('assets/alucard.jpg'),
+          backgroundImage: AssetImage('assets/Alucard.png'),
         ),
       ),
     );
@@ -36,6 +38,13 @@ class HomePage extends StatelessWidget {
       ),
     );
 
+    final login = IconButton(
+      icon: Icon(Icons.login),
+      onPressed: () {
+        Navigator.of(context).pushNamed(LoginPage.routeName);
+      },
+    );
+
     final body = Container(
       width: MediaQuery.of(context).size.width,
       padding: const EdgeInsets.all(28.0),
@@ -46,7 +55,7 @@ class HomePage extends StatelessWidget {
         ]),
       ),
       child: Column(
-        children: <Widget>[alucard, welcome, lorem],
+        children: <Widget>[alucard, welcome, lorem, login],
       ),
     );
 

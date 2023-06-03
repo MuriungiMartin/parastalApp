@@ -5,6 +5,7 @@ import 'package:lbdaap/base/export_all.dart';
 
 class LoginPage extends StatefulWidget {
   static const String routeName = "/login";
+  static String tag = 'login-page';
 
   @override
   _LoginPageState createState() => _LoginPageState();
