@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors_in_immutables, library_private_types_in_public_api, prefer_const_constructors, prefer_const_literals_to_create_immutables, deprecated_member_use
+// ignore_for_file: prefer_const_constructors_in_immutables, library_private_types_in_public_api, prefer_const_constructors, prefer_const_literals_to_create_immutables, deprecated_member_use, unused_import, file_names
 
 import 'package:flutter/material.dart';
 import 'package:lbdaap/src/loginPage.dart';
@@ -115,9 +115,11 @@ class _WelcomePageState extends State<WelcomePage> {
     //         ),
     //       ]),
     // );
-    return Image(
-        image: AssetImage('assets/Alucard.png'), height: 200, width: 200)
-        ;
+    return CircleAvatar(
+      backgroundColor: Colors.transparent,
+      radius: 50,
+      child: Image.asset('assets/Alucard.png'),
+    );
   }
 
   @override

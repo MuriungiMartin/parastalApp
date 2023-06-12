@@ -1,6 +1,7 @@
 // ignore_for_file: unused_import, prefer_const_constructors_in_immutables, library_private_types_in_public_api, prefer_const_constructors, prefer_const_literals_to_create_immutables, sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
+import 'package:lbdaap/base/export_all.dart';
 import 'package:lbdaap/src/signup.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -62,23 +63,44 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   Widget _submitButton() {
-    return Container(
-      width: MediaQuery.of(context).size.width,
-      padding: EdgeInsets.symmetric(vertical: 15),
-      alignment: Alignment.center,
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(5)),
-          boxShadow: <BoxShadow>[
-            BoxShadow(
-                color: Colors.grey.shade200,
-                offset: Offset(2, 4),
-                blurRadius: 5,
-                spreadRadius: 2)
-          ],
-          gradient: LinearGradient(
-              begin: Alignment.centerLeft,
-              end: Alignment.centerRight,
-              colors: [Color(0xfffbb448), Color(0xfff7892b)])),
+    // return Container(
+    //   width: MediaQuery.of(context).size.width,
+    //   padding: EdgeInsets.symmetric(vertical: 15),
+    //   alignment: Alignment.center,
+    //   decoration: BoxDecoration(
+    //       borderRadius: BorderRadius.all(Radius.circular(5)),
+    //       boxShadow: <BoxShadow>[
+    //         BoxShadow(
+    //             color: Colors.grey.shade200,
+    //             offset: Offset(2, 4),
+    //             blurRadius: 5,
+    //             spreadRadius: 2)
+    //       ],
+    //       gradient: LinearGradient(
+    //           begin: Alignment.centerLeft,
+    //           end: Alignment.centerRight,
+    //           colors: [Color(0xfffbb448), Color(0xfff7892b)])),
+
+    //   child: Text(
+    //     'Login',
+    //     style: TextStyle(fontSize: 20, color: Colors.white),
+
+    //   ),
+
+    // );
+
+    return TextButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => HomePageDashBoard()),
+        );
+      },
+      style: ButtonStyle(
+        backgroundColor: MaterialStateProperty.all<Color>(Colors.orange),
+        padding: MaterialStateProperty.all<EdgeInsets>(EdgeInsets.all(15)),
+        foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
+      ),
       child: Text(
         'Login',
         style: TextStyle(fontSize: 20, color: Colors.white),
@@ -220,10 +242,10 @@ class _LoginPageState extends State<LoginPage> {
     //         ),
     //       ]),
     //);
-    return Image.asset(
-      'assets/Alucard.png',
-      height: 100,
-      width: 100,
+    return CircleAvatar(
+      backgroundColor: Colors.white,
+      radius: 50,
+      child: Image.asset('assets/Alucard.png'),
     );
   }
 

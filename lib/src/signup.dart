@@ -61,23 +61,42 @@ class _SignUpPageState extends State<SignUpPage> {
   }
 
   Widget _submitButton() {
-    return Container(
-      width: MediaQuery.of(context).size.width,
-      padding: EdgeInsets.symmetric(vertical: 15),
-      alignment: Alignment.center,
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(5)),
-          boxShadow: <BoxShadow>[
-            BoxShadow(
-                color: Colors.grey.shade200,
-                offset: Offset(2, 4),
-                blurRadius: 5,
-                spreadRadius: 2)
-          ],
-          gradient: LinearGradient(
-              begin: Alignment.centerLeft,
-              end: Alignment.centerRight,
-              colors: [Color(0xfffbb448), Color(0xfff7892b)])),
+    // return Container(
+    //   width: MediaQuery.of(context).size.width,
+    //   padding: EdgeInsets.symmetric(vertical: 15),
+    //   alignment: Alignment.center,
+    //   decoration: BoxDecoration(
+    //       borderRadius: BorderRadius.all(Radius.circular(5)),
+    //       boxShadow: <BoxShadow>[
+    //         BoxShadow(
+    //             color: Colors.grey.shade200,
+    //             offset: Offset(2, 4),
+    //             blurRadius: 5,
+    //             spreadRadius: 2)
+    //       ],
+    //       gradient: LinearGradient(
+    //           begin: Alignment.centerLeft,
+    //           end: Alignment.centerRight,
+    //           colors: [Color(0xfffbb448), Color(0xfff7892b)])),
+    //   child: Text(
+    //     'Register Now',
+    //     style: TextStyle(fontSize: 20, color: Colors.white),
+    //   ),
+    // );
+    return TextButton(
+      onPressed: () {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => LoginPage()));
+      },
+      style: ButtonStyle(
+        backgroundColor: MaterialStateProperty.all<Color>(Colors.orange),
+        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+          RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(18.0),
+            side: BorderSide(color: Colors.orange),
+          ),
+        ),
+      ),
       child: Text(
         'Register Now',
         style: TextStyle(fontSize: 20, color: Colors.white),
@@ -119,24 +138,12 @@ class _SignUpPageState extends State<SignUpPage> {
   }
 
   Widget _title() {
-    return RichText(
-      textAlign: TextAlign.center,
-      text: TextSpan(
-          text: 'd',
-          style: TextStyle(
-              fontSize: 30,
-              fontWeight: FontWeight.w700,
-              color: Color(0xffe46b10)),
-          children: [
-            TextSpan(
-              text: 'ev',
-              style: TextStyle(color: Colors.black, fontSize: 30),
-            ),
-            TextSpan(
-              text: 'rnz',
-              style: TextStyle(color: Color(0xffe46b10), fontSize: 30),
-            ),
-          ]),
+    //
+    //return circular logo image
+    return CircleAvatar(
+      backgroundColor: Colors.transparent,
+      radius: 50,
+      child: Image.asset('assets/Alucard.png'),
     );
   }
 
