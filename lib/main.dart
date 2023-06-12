@@ -1,30 +1,27 @@
-import 'package:flutter/material.dart';
-import 'package:lbdaap/base/export_all.dart';
-import 'package:lbdaap/screens/loginscreen.dart';
-import 'package:lbdaap/screens/homescreen.dart';
+// ignore_for_file: use_key_in_widget_constructors, deprecated_member_use
 
-void main() {
-  runApp(MyApp());
-}
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+import 'src/welcomePage.dart';
+
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  final routes = <String, WidgetBuilder>{
-    LoginPage.routeName: (context) => LoginPage(),
-    HomePage.routeName: (context) => HomePage(),
-  };
-
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      title: 'Parastatal Kenya',
-      debugShowCheckedModeBanner: false,
+    final textTheme = Theme.of(context).textTheme;
+    return MaterialApp(
+      title: 'Parastatal KE',
       theme: ThemeData(
-        primaryColor: ColorConstant.lightBlueA200,
-        accentColor: ColorConstant.bluegray401,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
+         primarySwatch: Colors.blue,
+         textTheme:GoogleFonts.latoTextTheme(textTheme).copyWith(
+           bodyText1: GoogleFonts.montserrat(textStyle: textTheme.bodyText1),
+         ),
       ),
-      home: LoginPage(),
-      routes: routes,
+      debugShowCheckedModeBanner: false,
+      home: WelcomePage(),
     );
   }
 }
