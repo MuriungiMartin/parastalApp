@@ -97,7 +97,8 @@ class _LoginPageState extends State<LoginPage> {
         );
       },
       style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.all<Color>(Colors.orange),
+        backgroundColor:
+            MaterialStateProperty.all<Color>(ColorConstant.orange400),
         padding: MaterialStateProperty.all<EdgeInsets>(EdgeInsets.all(15)),
         foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
       ),

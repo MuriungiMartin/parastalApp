@@ -14,12 +14,30 @@ class _HomePageDashBoardState extends State<HomePageDashBoard> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 12),
+            child: Icon(
+              Icons.people_alt_outlined,
+              color: ColorConstant.whiteA700,
+              semanticLabel: 'Profile',
+            ),
+          )
+        ],
         title: Text("Parastatal KE"),
         centerTitle: true,
-        backgroundColor: Colors.orange,
+        backgroundColor: ColorConstant.orange400,
+        foregroundColor: ColorConstant.whiteA700,
+        toolbarTextStyle: TextStyle(
+          color: ColorConstant.whiteA700,
+          fontSize: 16,
+          fontWeight: FontWeight.w900,
+        ),
       ),
       drawer: _GloblaDrawer(),
-      body: SingleChildScrollView(),
+      body: ListView(
+        children: [CommonHeader()],
+      ),
     );
   }
 

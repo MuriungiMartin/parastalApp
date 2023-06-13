@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:lbdaap/src/Widget/bezierContainer.dart';
 import 'package:lbdaap/src/loginPage.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:lbdaap/base/export_all.dart';
 
 class SignUpPage extends StatefulWidget {
   SignUpPage({Key? key, this.title}) : super(key: key);
@@ -89,11 +90,12 @@ class _SignUpPageState extends State<SignUpPage> {
             context, MaterialPageRoute(builder: (context) => LoginPage()));
       },
       style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.all<Color>(Colors.orange),
+        backgroundColor:
+            MaterialStateProperty.all<Color>(ColorConstant.orange400),
         shape: MaterialStateProperty.all<RoundedRectangleBorder>(
           RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(18.0),
-            side: BorderSide(color: Colors.orange),
+            side: BorderSide(color: ColorConstant.orange400),
           ),
         ),
       ),

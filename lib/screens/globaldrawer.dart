@@ -9,19 +9,17 @@ class GlobalDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      backgroundColor: Colors.white,
+      backgroundColor: ColorConstant.whiteA70030,
       child: ListView(
         children: [
           DrawerHeader(
             decoration: BoxDecoration(
-              color: Colors.orange,
+              color: ColorConstant.orange40019,
             ),
-            child: Text(
-              "Parastatal KE",
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 16,
-              ),
+            child: Image.asset(
+              'assets/logo.png',
+              width: 25,
+              height: 25,
             ),
           ),
           ListTile(
@@ -37,8 +35,9 @@ class GlobalDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: Icon(Icons.person),
+            leading: Icon(Icons.people_alt_outlined),
             title: Text("Profile"),
+            textColor: ColorConstant.black900,
             onTap: () {
               Navigator.push(
                 context,
@@ -51,6 +50,7 @@ class GlobalDrawer extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.settings),
             title: Text("Settings"),
+            textColor: ColorConstant.black900,
             onTap: () {
               Navigator.push(
                 context,
@@ -63,6 +63,7 @@ class GlobalDrawer extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.logout),
             title: Text("Logout"),
+            textColor: ColorConstant.black900,
             onTap: () {
               Navigator.push(
                 context,
@@ -82,7 +83,7 @@ class GlobalDrawer extends StatelessWidget {
       appBar: AppBar(
         title: Text("Settings"),
         centerTitle: true,
-        backgroundColor: Colors.orange,
+        backgroundColor: ColorConstant.orange400,
       ),
       body: Center(
         child: Text("Settings Page"),
@@ -95,7 +96,7 @@ class GlobalDrawer extends StatelessWidget {
       appBar: AppBar(
         title: Text("Profile"),
         centerTitle: true,
-        backgroundColor: Colors.orange,
+        backgroundColor: ColorConstant.orange400,
       ),
       body: Center(
         child: Text("Profile Page"),
