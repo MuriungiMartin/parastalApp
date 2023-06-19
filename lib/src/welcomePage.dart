@@ -118,7 +118,7 @@ class _WelcomePageState extends State<WelcomePage> {
     return CircleAvatar(
       backgroundColor: Colors.transparent,
       radius: 50,
-      child: Image.asset('assets/Alucard.png'),
+      child: Image.asset('assets/bytelink.png'),
     );
   }
 
@@ -141,7 +141,10 @@ class _WelcomePageState extends State<WelcomePage> {
               gradient: LinearGradient(
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
-                  colors: [Color(0xfffbb448), Color(0xffe46b10)])),
+                  colors: [
+                    Color.fromARGB(204, 230, 226, 218),
+                    Color.fromARGB(255, 190, 183, 177)
+                  ])),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,

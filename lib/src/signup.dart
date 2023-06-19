@@ -145,7 +145,7 @@ class _SignUpPageState extends State<SignUpPage> {
     return CircleAvatar(
       backgroundColor: Colors.transparent,
       radius: 50,
-      child: Image.asset('assets/Alucard.png'),
+      child: Image.asset('assets/bytelink.png'),
     );
   }
 

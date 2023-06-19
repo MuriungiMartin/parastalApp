@@ -22,7 +22,7 @@ class CommonDashBoardAppBar extends StatelessWidget implements PreferredSize {
       elevation: 0.0,
       leading: Padding(
           padding: const EdgeInsets.only(left: 25),
-          child: Image.asset('assets/logo.png')),
+          child: Image.asset('assets/BYTELINK3.png')),
       title: Text(
         "Parastatal KE",
         style: GoogleFonts.roboto(

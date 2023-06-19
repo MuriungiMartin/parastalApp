@@ -16,10 +16,13 @@ class GlobalDrawer extends StatelessWidget {
             decoration: BoxDecoration(
               color: ColorConstant.orange40019,
             ),
-            child: Image.asset(
-              'assets/logo.png',
-              width: 25,
-              height: 25,
+            child: Text(
+              "Parastatal KE",
+              style: TextStyle(
+                color: ColorConstant.whiteA700,
+                fontSize: 24,
+                fontWeight: FontWeight.w900,
+              ),
             ),
           ),
           ListTile(
